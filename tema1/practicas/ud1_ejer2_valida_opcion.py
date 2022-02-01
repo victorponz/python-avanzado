@@ -1,9 +1,7 @@
 # This Python file uses the following encoding: utf-8
-from pydoc import doc
-
 
 def valida_opcion():
-   
+    """Comprueba que la opción elegida en el menú es la correcta de entre los valores 0 a 5."""
     print("=============================")
     print("   GAMIFICACIÓN EN EL AULA")
     print("=============================")
