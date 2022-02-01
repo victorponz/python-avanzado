@@ -21,6 +21,6 @@ def valida_opcion():
             print("Por favor, vuelve a intentarlo")
         else:            
             return num
-            break
+            
 opcion = valida_opcion()
 print("La opción seleccionada es: %d" % opcion)
