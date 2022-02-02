@@ -15,8 +15,14 @@ def imprimirClaves():
         print(k, ' - ', end='')
 
 def introducirPasajeros():
-    vuelo['pasajeros'] = int(input("¿Número de pasajeros? ")) 
-
+    ok = False
+    while (not ok):
+        try:
+            vuelo['pasajeros'] = int(input("¿Número de pasajeros? ")) 
+        except ValueError:
+            print("El dato no es un entero")
+        else:
+            ok = True
 
 def imprimirValor():
     clave = input("Clave a imprimir? ")
