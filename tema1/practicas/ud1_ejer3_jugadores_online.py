@@ -1,8 +1,5 @@
 # This Python file uses the following encoding: utf-8
 
-from calendar import c
-
-
 def valida_opcion():
     """Comprueba que la opción elegida en el menú es la correcta de entre los valores 1 a 3."""
     incorrecto = True
