@@ -2,7 +2,6 @@
 # UNIDAD 1 - Ejercicio 4                   #
 # Diccionario vuelo (ESQUEMA)              #
 ############################################
-from asyncore import read
 
 
 vuelo = {'origen':'Valencia', 'destino':'Menorca', 'día':'15-08', 'clase':'turista'}
