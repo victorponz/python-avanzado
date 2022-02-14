@@ -92,6 +92,7 @@ def modificar_vida(conexion, cursor):
     vida = lee_vida()
     if existe_jugador(cursor, jugador):
         cursor.execute("UPDATE JUGADORES SET VIDA = ? WHERE NOMBRE = ?", (vida, jugador))
+        conexion.commit()
         print("La vida del jugador <{}> se ha modificado correctamente".format(jugador))    
     else:
         print("El jugador <%s> no existe" %(jugador))
@@ -107,6 +108,7 @@ def insertar_jugador(conexion, cursor):
     vida = lee_vida()
     if not existe_jugador(cursor, jugador):
         cursor.execute("INSERT INTO JUGADORES VALUES(?, ?)", (jugador, vida))
+        conexion.commit()
         print("El jugador <{}> se ha insertado correctamente".format(jugador)) 
     else:
         print("El jugador ya existe")
@@ -167,6 +169,7 @@ def quitar_herramienta(conexion, cursor):
     if existe_jugador(cursor, jugador):
         if existe_herramienta_jugador(cursor, jugador, herramienta):
             cursor.execute("DELETE FROM LISTA_HERRAMIENTAS WHERE JUGADOR = ? AND HERRAMIENTA = ?", (jugador, herramienta, ))
+            conexion.commit()
             print("Se ha eliminado la herramienta <{}> del jugador <{}> correctamente".format(herramienta, jugador))    
         else:
             print("El jugador <%s> no tiene la herramienta <%s>" %(jugador, herramienta))
