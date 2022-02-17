@@ -20,7 +20,3 @@ if __name__ == "__main__":
     v2 = Vuelo('Valencia', 'París', '15-08', '09-04')
     v2.imprimir()
     
-
-
- 
-
