@@ -68,17 +68,17 @@ class Contacto:
             print("Contacto:")
             print('  nombre -->', self.nombre)
             print('  teléfono -->', self.telefono)
-            print('  cuenta de correo -->', self.cuenta_correo)
+            print('  cuenta de correo -->', self.correo)
         elif self.idioma == Idioma.VALENCIANO:
             print("Contacte:")
             print('  nom -->', self.nombre)
             print('  telèfon -->', self.telefono)
-            print('  compte correu -->', self.cuenta_correo)            
+            print('  compte correu -->', self.correo)            
         else:
             print("Contact:")
             print('  name -->', self.nombre)
             print('  number phone -->', self.telefono)
-            print('  e-mail -->', self.cuenta_correo)
+            print('  e-mail -->', self.correo)
     
     def __eq__(self, other):
         return (self.nombre == other.nombre and self.telefono == other.telefono and self.correo == other.correo)
